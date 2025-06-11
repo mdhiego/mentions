@@ -1,0 +1,13 @@
+{
+  "name": "mention-tabs",
+  "version": "1.0.0",
+  "author": "Antonio Meireles",
+  "description": "Componente Angular para menções com contenteditable e popup inteligente.",
+  "keywords": ["angular", "mention", "popup", "contenteditable"],
+  "peerDependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@fortawesome/angular-fontawesome": "^0.11.1",
+    "rxjs": "^7.0.0"
+  }
+}

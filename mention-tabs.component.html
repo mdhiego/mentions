@@ -1,0 +1,24 @@
+<!-- Campo editável -->
+<div
+  #editor
+  contenteditable="true"
+  class="border rounded p-2 min-h-[100px] focus:outline-none focus:ring-2 focus:ring-blue-300"
+  (input)="onEditorInput($event)"
+></div>
+
+<!-- Popup de sugestões -->
+<app-mention-tabs
+  *ngIf="showPopup"
+  [position]="position"
+  [searchTerm]="searchTerm"
+  (onSelect)="selectItem($event.displayText)"
+  (mentionsChanged)="mentions = $event"
+></app-mention-tabs>
+
+<!-- Lista de menções -->
+<div *ngIf="mentions.length" class="text-sm text-gray-600 mt-4">
+  <div class="font-semibold mb-1">Menções inseridas:</div>
+  <ul class="list-disc pl-4">
+    <li *ngFor="let mention of mentions">{{ mention.displayText }}</li>
+  </ul>
+</div>
